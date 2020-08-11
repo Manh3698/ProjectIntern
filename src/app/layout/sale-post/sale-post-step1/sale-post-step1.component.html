@@ -1,1 +1,360 @@
-<p>sale-post-step1 works!</p>
+<div class="wrapper">
+    <div id="content" class="col-md-12 article-post">
+        <div class="container">
+            <div class="main row">
+                <div class="col-md-12 process-bar">
+                    <div class="row post-step">
+                        <div class="col-md-4 post-step-step active">
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <a class="post-step-num">1</a>
+                            <div class="post-step-info text-center">Tạo tin</div>
+                        </div>
+                        <div class="col-md-4 post-step-step disabled">
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <a class="post-step-num">2</a>
+                            <div class="post-step-info text-center">Kiểm tra lại</div>
+                        </div>
+                        <div class="col-md-4 post-step-step disabled">
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <a class="post-step-num">3</a>
+                            <div class="post-step-info text-center">Hoàn tất</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-8 left">
+                    <div class="col-sm-6 cate level-1">
+                        <h2>
+                            <div class="numberCircle">1</div>
+                            Chọn danh mục đăng tin
+                        </h2>
+                        <ul class="panel panel-default">
+                            <li class="panel-heading" onclick="return chooseSubCategory();">
+                                <a class="fa fa-arrow-circle-right collapsed" data-toggle="collapse"
+                                    data-parent="#accordion" href="#bid-1">
+                                    <h4 class="panel-title">Xe cộ</h4>
+                                </a>
+                            </li>
+                            <li class="panel-heading" onclick="return chooseSubCategory();">
+                                <a class="fa fa-arrow-circle-right collapsed" data-toggle="collapse"
+                                    data-parent="#accordion" href="#bid-3">
+                                    <h4 class="panel-title">Bất động sản - Mua bán</h4>
+                                </a>
+                            </li>
+                            <li class="panel-heading" onclick="return chooseSubCategory();">
+                                <a class="fa fa-arrow-circle-right collapsed" data-toggle="collapse"
+                                    data-parent="#accordion" href="#bid-4">
+                                    <h4 class="panel-title">Bất động sản - Thuê</h4>
+                                </a>
+                            </li>
+                            <li class="panel-heading" onclick="return chooseSubCategory();">
+                                <a class="fa fa-arrow-circle-right collapsed" data-toggle="collapse"
+                                    data-parent="#accordion" href="#bid-5">
+                                    <h4 class="panel-title">Đồ điện tử</h4>
+                                </a>
+                            </li>
+                            <li class="panel-heading" onclick="return chooseSubCategory();">
+                                <a class="fa fa-arrow-circle-right collapsed" data-toggle="collapse"
+                                    data-parent="#accordion" href="#bid-6">
+                                    <h4 class="panel-title">Thời trang, Đồ dùng cá nhân</h4>
+                                </a>
+                            </li>
+                            <li class="panel-heading" onclick="return chooseSubCategory();">
+                                <a class="fa fa-arrow-circle-right collapsed" data-toggle="collapse"
+                                    data-parent="#accordion" href="#bid-7">
+                                    <h4 class="panel-title">Nội ngoại thất, Đồ gia dụng</h4>
+                                </a>
+                            </li>
+                            <li class="panel-heading" onclick="return chooseSubCategory();">
+                                <a class="fa fa-arrow-circle-right collapsed" data-toggle="collapse"
+                                    data-parent="#accordion" href="#bid-8">
+                                    <h4 class="panel-title">Giải trí, Thể thao, Sở thích</h4>
+                                </a>
+                            </li>
+                            <li class="panel-heading" onclick="return chooseSubCategory();">
+                                <a class="fa fa-arrow-circle-right collapsed" data-toggle="collapse"
+                                    data-parent="#accordion" href="#bid-9">
+                                    <h4 class="panel-title">Đồ dùng văn phòng, công nông nghiệp</h4>
+                                </a>
+                            </li>
+                            <li class="panel-heading" onclick="return chooseSubCategory();">
+                                <a class="fa fa-arrow-circle-right collapsed" data-toggle="collapse"
+                                    data-parent="#accordion" href="#bid-10">
+                                    <h4 class="panel-title">Việc làm, Dịch vụ</h4>
+                                </a>
+                            </li>
+                            <li class="panel-heading" onclick="return chooseSubCategory();">
+                                <a class="fa fa-arrow-circle-right collapsed" data-toggle="collapse"
+                                    data-parent="#accordion" href="#bid-11">
+                                    <h4 class="panel-title">Sản phẩm khác</h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 cate level-2" id="categorySubLevel">
+                        <h2>
+                            <div class="numberCircle">2</div>
+                            Chọn danh mục đăng tin tiếp theo
+                        </h2>
+                        <div class="panel-group" id="accordion">
+
+                            <div class="panel panel-default">
+                                <div id="bid-1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>
+                                                <a data-pcid="1" routerLink="/post-step2">
+                                                    <h4 class="panel-title">Xe máy</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="1" href="#12">
+                                                    <h4 class="panel-title">Ô tô</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="1" href="#13">
+                                                    <h4 class="panel-title">Xe đạp</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="1" href="#14">
+                                                    <h4 class="panel-title">Xe tải, Xe khác</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="1" href="#15">
+                                                    <h4 class="panel-title">Phụ tùng, Phụ kiện xe</h4>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="bid-3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>
+                                                <a data-pcid="3" href="#16">
+                                                    <h4 class="panel-title">Căn hộ/Chung cư</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="3" href="#17">
+                                                    <h4 class="panel-title">Nhà ở</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="3" href="#18">
+                                                    <h4 class="panel-title">Đất</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="3" href="#19">
+                                                    <h4 class="panel-title">Văn phòng, Mặt bằng kinh doanh</h4>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="bid-4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>
+                                                <a data-pcid="4" href="#20">
+                                                    <h4 class="panel-title">Căn hộ/Chung cư</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="4" href="#21">
+                                                    <h4 class="panel-title">Nhà ở</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="4" href="#22">
+                                                    <h4 class="panel-title">Đất</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="4" href="#23">
+                                                    <h4 class="panel-title">Văn phòng, Mặt bằng kinh doanh</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="4" href="#24">
+                                                    <h4 class="panel-title">Phòng trọ</h4>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="bid-5" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>
+                                                <a data-pcid="5" href="#39">
+                                                    <h4 class="panel-title">Điện thoại di động</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="5" href="#40">
+                                                    <h4 class="panel-title">Máy tính bảng</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="5" href="#41">
+                                                    <h4 class="panel-title">Máy tính, Laptop</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="5" href="#42">
+                                                    <h4 class="panel-title">Máy ảnh, Máy quay</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="5" href="#43">
+                                                    <h4 class="panel-title">Tivi, Loa, Amply, Máy nghe nhạc</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="5" href="#44">
+                                                    <h4 class="panel-title">Phụ kiện, Linh kiện</h4>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="bid-6" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>
+                                                <a data-pcid="6" href="#45">
+                                                    <h4 class="panel-title">Quần áo</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="6" href="#46">
+                                                    <h4 class="panel-title">Giày dép, Túi xách, Phụ kiện</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="6" href="#47">
+                                                    <h4 class="panel-title">Mẹ và bé</h4>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="bid-7" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>
+                                                <a data-pcid="7" href="#36">
+                                                    <h4 class="panel-title">Tủ lạnh, Máy lạnh, Máy giặt</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="7" href="#37">
+                                                    <h4 class="panel-title">Nội ngoại thất, Cây cảnh</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="7" href="#38">
+                                                    <h4 class="panel-title">Đồ gia dụng gia đình khác</h4>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="bid-8" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>
+                                                <a data-pcid="8" href="#32">
+                                                    <h4 class="panel-title">Vật nuôi, Thú cưng</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="8" href="#33">
+                                                    <h4 class="panel-title">Âm nhạc, Phim, Sách</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="8" href="#34">
+                                                    <h4 class="panel-title">Đồ thể thao, Dã ngoại</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="8" href="#35">
+                                                    <h4 class="panel-title">Sưu tầm, Game, Sở thích khác</h4>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="bid-9" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>
+                                                <a data-pcid="9" href="#30">
+                                                    <h4 class="panel-title">Đồ dùng văn phòng</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="9" href="#31">
+                                                    <h4 class="panel-title">Đồ chuyên dụng, Giống nuôi trồng</h4>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="bid-10" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>
+                                                <a data-pcid="10" href="#26">
+                                                    <h4 class="panel-title">Việc tìm người</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="10" href="#27">
+                                                    <h4 class="panel-title">Người tìm việc</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="10" href="#28">
+                                                    <h4 class="panel-title">Dịch vụ</h4>
+                                                </a></li>
+                                            <li>
+                                                <a data-pcid="10" href="#29">
+                                                    <h4 class="panel-title">Du lịch</h4>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="bid-11" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>
+                                                <a data-pcid="11" href="#25">
+                                                    <h4 class="panel-title">Sản phẩm khác</h4>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-12 col-md-4 text-center right">
+                    <div class="alert alert-info box-info-note text-left">
+                        <ul class="note-step2">
+                            <li><strong>Lưu ý:</strong></li>
+                            <li><i class="fa fa-hand-o-right" aria-hidden="true"></i> Bạn nên tạo tài khoản để được
+                                sử dụng đầy đủ các chức năng và quản lý tin đăng tốt hơn.
+                            </li>
+                            <li><i class="fa fa-hand-o-right" aria-hidden="true"></i> Miêu tả chi tiết sản phẩm:
+                                thương hiệu,tình trạng,phụ kiện đi kèm...
+                            </li>
+                            <li><i class="fa fa-hand-o-right" aria-hidden="true"></i> Tin rao vặt bằng tiếng Việt có
+                                dấu.
+                            </li>
+                            <li><i class="fa fa-hand-o-right" aria-hidden="true"></i> Mỗi tin rao vặt chỉ rao bán
+                                một mặt hàng.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
