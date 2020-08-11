@@ -264,7 +264,7 @@ select {
 .content-box .filter ul li {
     display: inline-block;
     width: auto !important;
-    float: left;
+    /* float: left; */
 }
 
 .content-box .filter ul li a {
