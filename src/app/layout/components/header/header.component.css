@@ -1,0 +1,13 @@
+.row {
+    margin-right: 0px!important;
+    margin-left: -15px;
+}
+.right {
+    padding-right: 100px !important;
+}
+.navbar .container{
+    margin-right: 0;
+}
+#searchbox .container{
+    margin-right: 0;
+}

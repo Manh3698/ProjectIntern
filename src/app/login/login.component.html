@@ -1,0 +1,221 @@
+<!-- HEADER  -->
+<div id="header" class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-xs-6 left">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="../assets/img/logo.png" title="chomienphi.net" alt="chomienphi.net">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- END HEADER -->
+
+<div id="content" class="col-xs-12 bg-login">
+    <div class="container">
+        <div class="main row">
+            <div class="col-lg-12">
+                <div class="pens content-box">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group form-title">
+                                <h3><i class="fa fa-sign-in"></i> Đăng nhập</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 login-box-right">
+                            <div class="form-group text-center col-lg-12">
+                                <button id="loginFacebook" class="btn btn-primary w100 mb10" type="button">
+                                    <i class="fa fa-facebook-square"></i> Đăng nhập bằng Facebook
+                                </button>
+
+                                <button id="loginGoogle" class="btn btn-danger w100 mb10" type="button">
+                                    <i class="fa fa-google-plus"></i> Đăng nhập bằng Google
+                                </button>
+
+                                <button class="btn btn-info w100 mb10 login-social" onclick="zaloLogin();"
+                                    type="button">
+                                    <img style="width: 15px" src="https://chomienphi.net/public/fe/images/icon-zalo.svg"
+                                        alt="login zalo">
+                                    Đăng nhập bằng số Zalo
+                                </button>
+
+                                <a class="btn btn-default w100 mb10 login-social"
+                                    href="https://chomienphi.net/users/signin?type=email">
+                                    <i class="fa fa-user"></i>
+                                    Đăng nhập bằng email
+                                </a>
+
+                                <button class="btn btn-info w100 mb10 smsLogin login-social" type="button">
+                                    <i class="fa fa-phone-square"></i> Đăng nhập bằng số điện thoại
+                                </button>
+
+                                <hr>
+                                <div class="form-group text-left">
+                                    <div>
+                                        Bạn chưa có tài khoản ?
+                                        <a class="register-btn" routerLink="/register">
+                                            Đăng ký.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <form action="https://chomienphi.net/users/login/" class="form" method="post" role="form">
+                                <div class="col-md-12 content">
+                                    <div class="form-group">
+                                        <input class="form-control required mail_ack" data-val="true"
+                                            data-val-required="Bạn vui lòng nhập Email hoặc tên đăng nhập" id="lemail"
+                                            maxlength="256" name="lemail" placeholder="Email đăng nhập *"
+                                            required="required" type="email" value="">
+                                    </div>
+                                    <div class="form-group check-login-pass">
+                                        <input class="check-login-pass form-control required" data-val="true"
+                                            data-val-maxlength="Mật khẩu tối đa 50 ký tự" data-val-maxlength-max="50"
+                                            data-val-required="Bạn vui lòng nhập Mật khẩu" id="lpassword" maxlength="51"
+                                            required="required" name="lpassword" placeholder="Mật khẩu *"
+                                            type="password">
+                                    </div>
+                                    <!--<div class="form-group">
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" value="1" id="no-password">
+                                                Đăng nhập không cần password
+                                            </label>
+                                        </div>-->
+                                    <div class="form-group">
+                                        <div class="text-left">
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" value="1" id="remember" checked>
+                                                Ghi nhớ tài khoản
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <!-- <div class="btn-submit text-left">
+                                                <input type="button" value="Đăng nhập" class="btn btn-default llogin">
+                                            </div> -->
+                                        <a class="btn btn-default w100 mb10 login-social llogin"
+                                            routerLink="/layout">Đăng nhập
+                                        </a>
+                                    </div>
+                                    <div class="ms_error"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </form>
+
+                            <div class="alert alert-info text-left">
+                                <ul class="note-step2">
+                                    <li>
+                                        <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                                        Bạn cần đăng nhập để chủ động kiểm tra tin được duyệt hay không được duyệt,
+                                        thời
+                                        gian đăng tin, thời gian đẩy tin....Và quản lý tìn đăng tốt hơn.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div id="footer-area" class="col-xs-12">
+    <div class="container">
+        <div class="row links">
+            <div class="col-md-3 support">
+                <div class="content">
+                    <h2>Hỗ trợ khách hàng</h2>
+                    <ul>
+                        <li>
+                            <a href="https://chomienphi.net/news/quy-dinh-dang-tin.html">
+                                Quy định đăng tin </a>
+                        </li>
+                        <li>
+                            <a href="https://chomienphi.net/news/quy-che-hoat-dong.html">
+                                Quy chế hoạt động </a>
+                        </li>
+                        <li>
+                            <a href="https://chomienphi.net/news/dieu-khoan-su-dung.html">
+                                Điều khoản sử dụng </a>
+                        </li>
+                        <li><a href="https://chomienphi.net/lien-he-ho-tro.html">Liên hệ hỗ
+                                trợ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 about">
+                <div class="content">
+                    <h2>ChoMienPhi.net</h2>
+                    <ul>
+                        <li>
+                            <a href="https://chomienphi.net/news/gioi-thieu-muc-tieu.html">
+                                Giới thiệu - Mục tiêu </a>
+                        </li>
+                        <li>
+                            <a href="https://chomienphi.net/news/chinh-sach-bao-mat.html">
+                                Chính sách bảo mật </a>
+                        </li>
+                        <li>
+                            <a href="https://chomienphi.net/news/giai-quyet-tranh-chap.html">
+                                Giải quyết tranh chấp </a>
+                        </li>
+                        <li>
+                            <a href="https://chomienphi.net/news/Quang-cao.html">
+                                Quảng cáo </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 socials">
+                <div class="content">
+                    <h2>Liên kết</h2>
+                    <ul>
+                        <li class="fa fa-facebook-square" aria-hidden="true">
+                            <a target="_blank" rel="nofollow" href="">Facebook</a>
+                        </li>
+                        <li class="fa fa-google-plus">
+                            <a target="_blank" rel="nofollow" href="">Google+</a>
+                        </li>
+                        <li class="fa fa-youtube">
+                            <a target="_blank" rel="nofollow" href="">Youtube</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 certi">
+                <div class="content">
+                    <h2>Chứng nhận</h2>
+                    <ul>
+                        <li>
+                            <a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=30362" target="_blank"
+                                rel="nofollow">
+                                <img src="https://chomienphi.net/public/fe/images/dathongbao.png" alt="dathongbao.png"
+                                    title="dathongbao.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- ./END FOOTER -->

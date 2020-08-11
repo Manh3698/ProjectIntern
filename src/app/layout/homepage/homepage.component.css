@@ -1,0 +1,14 @@
+.row {
+    margin-right: 0px!important;
+    margin-left: -15px;
+}
+.right {
+    padding-right: 100px !important;
+}
+#content .container{
+    margin-right: 0;
+}
+.left h2.head-text {
+    font-size: 14px;
+    font-style: inherit;
+}

@@ -1,0 +1,120 @@
+/* 
+
+    .ctrlq.fb-button {
+        position: fixed;
+        right: 24px;
+        cursor: pointer
+    }
+
+    .ctrlq.fb-button {
+        z-index: 999;
+        background: #fff url('https://chomienphi.net/public/fe/images/icon-chat.png') center no-repeat;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        bottom: 50px;
+        border: 0;
+        outline: 0;
+        border-radius: 60px;
+        -webkit-border-radius: 60px;
+        -moz-border-radius: 60px;
+        -ms-border-radius: 60px;
+        -o-border-radius: 60px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, .06), 0 2px 32px rgba(0, 0, 0, .16);
+        -webkit-transition: box-shadow .2s ease;
+        background-size: 80%;
+        transition: all .2s ease-in-out
+    }
+
+    .ctrlq.fb-button:focus, .ctrlq.fb-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .09), 0 4px 40px rgba(0, 0, 0, .24)
+    }
+
+    .fb-credit a {
+        transition: none;
+        color: #bec2c9;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        text-decoration: none;
+        border: 0;
+        font-weight: 400
+    } */
+    #content {
+        min-height: 300px;
+    }
+    .bg-login {
+        background: #f8f8f8;
+    }
+    .col-xs-12 {
+        width: 100%;
+    }
+    .pens {
+        background: #fff;
+        width: 860px;
+        margin: 50px auto;
+        font-size: 13px;
+        clear: both;
+    }
+    .content-box {
+        /* margin-top: 73px;
+        margin-right: 0; */
+        border: 1px solid #ddd;
+        padding: 5px 10px;
+    }
+    .row {
+        margin-right: 0px;
+        margin-left: -15px;
+    }
+    .w100{
+        width: 100%;
+    }
+    .mb10 {
+        margin-bottom: 10px;
+    }
+    .alert>p, .alert>ul {
+        margin-bottom: 0;
+    }
+    
+    .note-step2 {
+        list-style: none;
+        padding: 0;
+    }
+    ol, ul {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .alert-info {
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+    
+    .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    .text-left {
+        text-align: left;
+    }
+    .login-social {
+        padding: 5px 0;
+        font-size: 13px;
+        border-radius: 4px;
+    }
+    .btn.btn-default {
+        color: #FFF;
+    }
+    .btn-default, .label-default {
+        background-color: #E97926;
+        border-color: #E97926;
+        background-image: none;
+    }
+    .btn{
+        text-align: center;
+    }
+    .llogin{
+        width: 100px;
+    }

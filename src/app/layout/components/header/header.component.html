@@ -1,0 +1,180 @@
+<!-- HEADER  -->
+<div id="header" class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-xs-6 left">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="./assets/img/logo.png" title="chomienphi.net" alt="chomienphi.net">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-xs-6 right">
+                        <a class="fancybox login-btn" href="#">
+                            <span class="fa fa-sign-in">&nbsp;</span><span> Đăng nhập</span>
+                        </a>
+                        <a href="#">
+                            <span class="newpost"><span class="fa fa-pencil">&nbsp;&nbsp;</span>ĐĂNG TIN MIỄN
+                                PHÍ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="searchbox" class="col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <form method="get" action="">
+                        <div class="col-sm-10 col-md-10">
+                            <div class="row search-field">
+                                <div class="col-sm-4 col-md-4 input-text">
+                                    <input type="text" name="k" placeholder="Tìm kiếm" value="">
+                                </div>
+                                <div class="col-sm-4 col-md-4 input-category">
+                                    <select name="c">
+                                        <option value="all">Tất cả danh mục</option>
+                                        <optgroup label="Xe cộ"  optgroup="">
+                                            <option value="2">-- Xe máy</option>
+                                            <option value="12">-- Ô tô</option>
+                                            <option value="13">-- Xe đạp</option>
+                                            <option value="14">-- Xe tải, Xe khác</option>
+                                            <option value="15">-- Phụ tùng, Phụ kiện xe</option>
+                                        </optgroup>
+                                        <optgroup label="Bất động sản - Mua bán"  optgroup="">
+                                            <option value="16">-- Căn hộ/Chung cư</option>
+                                            <option value="17">-- Nhà ở</option>
+                                            <option value="18">-- Đất</option>
+                                            <option value="19">-- Văn phòng, Mặt bằng kinh doanh</option>
+                                        </optgroup>
+                                        <optgroup label="Bất động sản - Thuê"  optgroup="">
+                                            <option value="20">-- Căn hộ/Chung cư</option>
+                                            <option value="21">-- Nhà ở</option>
+                                            <option value="22">-- Đất</option>
+                                            <option value="23">-- Văn phòng, Mặt bằng kinh doanh</option>
+                                            <option value="24">-- Phòng trọ</option>
+                                        </optgroup>
+                                        <optgroup label="Đồ điện tử"  optgroup="">
+                                            <option value="39">-- Điện thoại di động</option>
+                                            <option value="40">-- Máy tính bảng</option>
+                                            <option value="41">-- Máy tính, Laptop</option>
+                                            <option value="42">-- Máy ảnh, Máy quay</option>
+                                            <option value="43">-- Tivi, Loa, Amply, Máy nghe nhạc</option>
+                                            <option value="44">-- Phụ kiện, Linh kiện</option>
+                                        </optgroup>
+                                        <optgroup label="Thời trang, Đồ dùng cá nhân"  optgroup="">
+                                            <option value="45">-- Quần áo</option>
+                                            <option value="46">-- Giày dép, Túi xách, Phụ kiện</option>
+                                            <option value="47">-- Mẹ và bé</option>
+                                        </optgroup>
+                                        <optgroup label="Nội ngoại thất, Đồ gia dụng"  optgroup="">
+                                            <option value="36">-- Tủ lạnh, Máy lạnh, Máy giặt</option>
+                                            <option value="37">-- Nội ngoại thất, Cây cảnh</option>
+                                            <option value="38">-- Đồ gia dụng gia đình khác</option>
+                                        </optgroup>
+                                        <optgroup label="Giải trí, Thể thao, Sở thích"  optgroup="">
+                                            <option value="32">-- Vật nuôi, Thú cưng</option>
+                                            <option value="33">-- Âm nhạc, Phim, Sách</option>
+                                            <option value="34">-- Đồ thể thao, Dã ngoại</option>
+                                            <option value="35">-- Sưu tầm, Game, Sở thích khác</option>
+                                        </optgroup>
+                                        <optgroup label="Đồ dùng văn phòng, công nông nghiệp" optgroup="">
+                                            <option value="30">-- Đồ dùng văn phòng</option>
+                                            <option value="31">-- Đồ chuyên dụng, Giống nuôi trồng</option>
+                                        </optgroup>
+                                        <optgroup label="Việc làm, Dịch vụ"  optgroup="">
+                                            <option value="26">-- Việc tìm người</option>
+                                            <option value="27">-- Người tìm việc</option>
+                                            <option value="28">-- Dịch vụ</option>
+                                            <option value="29">-- Du lịch</option>
+                                        </optgroup>
+                                        <optgroup label="Sản phẩm khác"  optgroup="">
+                                            <option value="25">-- Sản phẩm khác</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4 col-md-4 input-location">
+                                    <select name="a">
+                                        <option value="toan-quoc">Toàn quốc</option>
+                                        <option selected="selected" value="3"> Hồ Chí Minh</option>
+                                        <option value="1"> Hà nội</option>
+                                        <option value="2"> Đà Nẵng</option>
+                                        <option value="4"> Hải Phòng</option>
+                                        <option value="5"> Cần Thơ</option>
+                                        <option value="6"> Bình Dương</option>
+                                        <option value="7"> An Giang</option>
+                                        <option value="8"> Bà Rịa - Vũng Tàu</option>
+                                        <option value="9"> Bắc Giang</option>
+                                        <option value="411"> Văn Lâm</option>
+                                        <option value="10"> Bắc Cạn</option>
+                                        <option value="11"> Bạc Liêu</option>
+                                        <option value="12"> Bắc Ninh</option>
+                                        <option value="13"> Bến Tre</option>
+                                        <option value="14"> Bình Định</option>
+                                        <option value="15"> Bình Phước</option>
+                                        <option value="16"> Bình Thuận</option>
+                                        <option value="17"> Cà Mau</option>
+                                        <option value="18"> Cao Bằng</option>
+                                        <option value="19"> Đắk Lắk</option>
+                                        <option value="20"> Đắk Nông</option>
+                                        <option value="21"> Điện Biên</option>
+                                        <option value="22"> Đồng Nai</option>
+                                        <option value="23"> Đồng Tháp</option>
+                                        <option value="24"> Gia Lai</option>
+                                        <option value="25"> Hà Giang</option>
+                                        <option value="26"> Hà Nam</option>
+                                        <option value="27"> Hà Tĩnh</option>
+                                        <option value="28"> Hải Dương</option>
+                                        <option value="29"> Hậu Giang</option>
+                                        <option value="30"> Hòa Bình</option>
+                                        <option value="31"> Hưng Yên</option>
+                                        <option value="32"> Khánh Hòa</option>
+                                        <option value="33"> Kiên Giang</option>
+                                        <option value="34"> Kon Tom</option>
+                                        <option value="35"> Lai Châu</option>
+                                        <option value="36"> Lâm Đồng</option>
+                                        <option value="37"> Lạng Sơn</option>
+                                        <option value="38"> Lào Cai</option>
+                                        <option value="39"> Long An</option>
+                                        <option value="40"> Nam Định</option>
+                                        <option value="41"> Nghệ An</option>
+                                        <option value="42"> Ninh Bình</option>
+                                        <option value="43"> Ninh Thuận</option>
+                                        <option value="44"> Phú Thọ</option>
+                                        <option value="45"> Phú Yên</option>
+                                        <option value="46"> Quảng Bình</option>
+                                        <option value="47"> Quảng Nam</option>
+                                        <option value="48"> Quảng Ngãi</option>
+                                        <option value="49"> Quảng Ninh</option>
+                                        <option value="50"> Quảng Trị</option>
+                                        <option value="51"> Sóc Trăng</option>
+                                        <option value="52"> Sơn La</option>
+                                        <option value="53"> Tây Ninh</option>
+                                        <option value="54"> Thái Bình</option>
+                                        <option value="55"> Thái Nguyên</option>
+                                        <option value="56"> Thanh Hóa</option>
+                                        <option value="57"> Thừa Thiên Huế</option>
+                                        <option value="58"> Tiền Giang</option>
+                                        <option value="59"> Trà Vinh</option>
+                                        <option value="60"> Tuyên Quang</option>
+                                        <option value="61"> Vĩnh Long</option>
+                                        <option value="62"> Vĩnh Phúc</option>
+                                        <option value="63"> Yên Bái</option>
+                                        <option value="64"> Nước Ngoài</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-1 search-btn">
+                            <button class="btn btn-search">Tìm kiếm</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END HEADER -->
