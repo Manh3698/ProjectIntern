@@ -12,6 +12,9 @@ import { SalePostStep3Component } from './sale-post/sale-post-step3/sale-post-st
 import { SalePostFinalComponent } from './sale-post/sale-post-final/sale-post-final.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProfileComponent } from './profile/profile/profile.component';
+import { ChangepassComponent } from './profile/changepass/changepass.component';
+import { HistoryComponent } from './profile/history/history.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { FooterComponent } from './components/footer/footer.component';
     SalePostStep1Component,
     SalePostStep2Component, 
     SalePostStep3Component, 
-    SalePostFinalComponent
+    SalePostFinalComponent, 
+    ProfileComponent, 
+    ChangepassComponent, 
+    HistoryComponent
   ],
   imports: [
     CommonModule,

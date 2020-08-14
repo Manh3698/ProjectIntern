@@ -9,6 +9,9 @@ import { SalePostStep1Component } from './sale-post/sale-post-step1/sale-post-st
 import { SalePostStep2Component } from './sale-post/sale-post-step2/sale-post-step2.component';
 import { SalePostStep3Component } from './sale-post/sale-post-step3/sale-post-step3.component';
 import { SalePostFinalComponent } from './sale-post/sale-post-final/sale-post-final.component';
+import { ProfileComponent } from './profile/profile/profile.component';
+import { ChangepassComponent } from './profile/changepass/changepass.component';
+import { HistoryComponent } from './profile/history/history.component';
 
 const routes: Routes = [
   { path: '', component: LayoutComponent,
@@ -19,7 +22,10 @@ const routes: Routes = [
       { path: 'post-step1', component:SalePostStep1Component},
       { path: 'post-step2', component:SalePostStep2Component},
       { path: 'post-step3', component:SalePostStep3Component},
-      { path: 'post-final', component:SalePostFinalComponent}
+      { path: 'post-final', component:SalePostFinalComponent},
+      { path: 'profile', component:ProfileComponent},
+      { path: 'changepass', component:ChangepassComponent},
+      { path: 'history', component:HistoryComponent}
     ]
   },
 ];

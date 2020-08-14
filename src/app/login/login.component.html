@@ -70,27 +70,18 @@
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <form action="https://chomienphi.net/users/login/" class="form" method="post" role="form">
+                            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form" >
                                 <div class="col-md-12 content">
                                     <div class="form-group">
-                                        <input class="form-control required mail_ack" data-val="true"
-                                            data-val-required="Bạn vui lòng nhập Email hoặc tên đăng nhập" id="lemail"
-                                            maxlength="256" name="lemail" placeholder="Email đăng nhập *"
-                                            required="required" type="email" value="">
+                                        <input class="form-control required mail_ack" maxlength="256" name="lemail" placeholder="Email đăng nhập *"
+                                            required="required" type="email" formControlName="username">
                                     </div>
                                     <div class="form-group check-login-pass">
                                         <input class="check-login-pass form-control required" data-val="true"
-                                            data-val-maxlength="Mật khẩu tối đa 50 ký tự" data-val-maxlength-max="50"
-                                            data-val-required="Bạn vui lòng nhập Mật khẩu" id="lpassword" maxlength="51"
+                                            id="lpassword" maxlength="51"
                                             required="required" name="lpassword" placeholder="Mật khẩu *"
-                                            type="password">
+                                            type="password" formControlName="password">
                                     </div>
-                                    <!--<div class="form-group">
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" value="1" id="no-password">
-                                                Đăng nhập không cần password
-                                            </label>
-                                        </div>-->
                                     <div class="form-group">
                                         <div class="text-left">
                                             <label class="checkbox-inline">
@@ -104,9 +95,10 @@
                                         <!-- <div class="btn-submit text-left">
                                                 <input type="button" value="Đăng nhập" class="btn btn-default llogin">
                                             </div> -->
-                                        <a class="btn btn-default w100 mb10 login-social llogin"
-                                            routerLink="/layout">Đăng nhập
-                                        </a>
+                                        <!-- <a class="btn btn-default w100 mb10 login-social llogin">
+                                            Đăng nhập
+                                        </a> -->
+                                        <button type="submit" class="btn btn-default w100 mb10 login-social llogin">Đăng nhập</button>
                                     </div>
                                     <div class="ms_error"></div>
                                 </div>

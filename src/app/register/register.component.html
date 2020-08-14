@@ -63,34 +63,33 @@
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <form class="form" method="post" role="form"
-                                action="https://chomienphi.net/users/register/">
+                            <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                                 <div class="col-md-12 content">
-                                    <div class="form-group">
-                                        <input class="form-control required" required="required" data-val="true"
-                                            data-val-required="Bạn vui lòng nhập Họ và tên" id="ffullname"
-                                            maxlength="256" name="ffullname" placeholder="Họ và tên *" type="text"
-                                            value="">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6 first">
+                                            <input type="text" class="form-control" formControlName="firstName" 
+                                                placeholder="First Name ...">
+                                        </div>
+                                        <div class="form-group col-md-6 last">
+                                            <input type="text" class="form-control" formControlName="lastName"
+                                                placeholder="Last Name ...">
+                                        </div>
                                     </div>
-
                                     <div class="form-group">
-                                        <input class="form-control required" required="required" data-val="true"
-                                            data-val-required="Bạn vui lòng nhập Email" id="femail" maxlength="256"
-                                            name="femail" placeholder="Email đăng ký *" type="text" value="">
+                                        <input type="email" class="form-control" formControlName="email"
+                                            placeholder="Email ...">
                                     </div>
-
                                     <div class="form-group">
-                                        <input class="form-control required" required="required" data-val="true"
-                                            data-val-maxlength="Mật khẩu tối đa 50 ký tự" data-val-maxlength-max="50"
-                                            data-val-required="Bạn vui lòng nhập Mật khẩu" id="fpassword" maxlength="51"
-                                            name="fpassword" placeholder="Mật khẩu *" type="password">
+                                        <input type="tel" class="form-control" formControlName="phone"
+                                            placeholder="Phone ...">
                                     </div>
-
                                     <div class="form-group">
-                                        <input class="form-control required" required="required" data-val="true"
-                                            data-val-maxlength="Mật khẩu tối đa 50 ký tự" data-val-maxlength-max="50"
-                                            data-val-required="Bạn vui lòng nhập Mật khẩu" id="fconfirm" maxlength="51"
-                                            name="fconfirm" placeholder="Xác nhận mật khẩu *" type="password">
+                                        <input type="text" class="form-control" formControlName="username"
+                                            placeholder="UserName ...">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" formControlName="password"
+                                            placeholder="Password ...">
                                     </div>
                                     <div class="ms_error"></div>
                                     <div class="form-group">
