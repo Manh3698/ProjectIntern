@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { RegisterService } from './register.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../_services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -16,21 +16,27 @@ export class RegisterComponent implements OnInit {
     phone : new FormControl(''),
     username : new FormControl(''),
     password : new FormControl('')
-  })
+  });
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
 
-  constructor(private registerService: RegisterService, private router : Router) { }
+  constructor(private authService: AuthService, private router : Router) { }
 
   ngOnInit(): void {
   };
 
   onSubmit(){
-    this.registerService.register(this.registerForm.value).subscribe(
+    this.authService.register(this.registerForm.value).subscribe(
       res => {
-        alert("Đăng ký thành công")
+        console.log(res);
+        this.isSuccessful = true;
+        this.isSignUpFailed = false;
+        alert("Đăng ký thành công");
       },
       error => {
-        console.log(error);
-        // location.reload();
+        this.errorMessage = error.error.message;
+        this.isSignUpFailed = true;
       }
     )
   }

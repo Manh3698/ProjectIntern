@@ -4,31 +4,31 @@
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6 col-xs-6 left">
+                    <div class="col-sm-6 col-md-6 col-xs-6 left" >
                         <div class="logo">
                             <a href="#">
                                 <img src="./assets/img/logo.png" title="chomienphi.net" alt="chomienphi.net">
                             </a>
                         </div>
                     </div>
-                    <!-- <div class="col-sm-6 col-md-6 col-xs-6 right">
-                        <a class="fancybox login-btn" href="#">
+                    <div class="col-sm-6 col-md-6 col-xs-6 right" *ngIf="!isLoggedIn">
+                        <a class="fancybox login-btn" routerLink="/login">
                             <span class="fa fa-sign-in">&nbsp;</span><span> Đăng nhập</span>
                         </a>
                         <a routerLink="/post-step1">
                             <span class="newpost"><span class="fa fa-pencil">&nbsp;&nbsp;</span>ĐĂNG TIN MIỄN
                                 PHÍ</span>
                         </a>
-                    </div> -->
-                    <div class="col-sm-6 col-md-6 col-xs-6 right">
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-xs-6 right" *ngIf="isLoggedIn">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="fa fa-user">&nbsp;</span><span>Hi, Nguyễn Văn Mạnh<span class="caret"></span></span>
+                            <span class="fa fa-user">&nbsp;</span><span>Hi, {{username}}<span class="caret"></span></span>
                         </a>
                         <ul class="dropdown-menu format_li">
                             <li><a routerLink="/history"><i class="fa fa-list"></i> Các tin đã đăng</a></li>
                             <li><a routerLink="/profile"><i class="fa fa-info-circle"></i> Thông tin cá nhân </a></li>
                             <li><a routerLink="/changepass"><i class="fa fa-key"></i> Thay đổi mật khẩu</a></li>
-                            <li><a href="https://chomienphi.net/users/logout/"><i class="fa fa-sign-out"></i> Thoát </a></li>
+                            <li><a href="" (click)="logout()"><i class="fa fa-sign-out"></i> Thoát </a></li>
                         </ul>
                         <a routerLink="/post-step1">
                             <span class="newpost"><span class="fa fa-pencil">&nbsp;&nbsp;</span>ĐĂNG TIN MIỄN PHÍ</span>
