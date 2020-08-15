@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
+import * as jwt_decode from "jwt-decode";
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,8 @@ export class HeaderComponent implements OnInit {
 
   private roles: string[];
   isLoggedIn = false;
-  username: string;
+  user: any;
+  username: any;
 
 
   constructor(private tokenStorageService: TokenStorageService) { }
@@ -19,9 +21,12 @@ export class HeaderComponent implements OnInit {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
 
     if (this.isLoggedIn) {
-      const user = this.tokenStorageService.getUser();
-      this.username = user.username;
-      console.log(this.username)
+       
+      const token = this.tokenStorageService.getToken();
+      let decoded = jwt_decode(token);
+      console.log(decoded);
+      this.username = decoded['sub'];
+      console.log(this.username);
     }
   };
   logout() {
