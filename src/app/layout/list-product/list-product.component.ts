@@ -10,6 +10,7 @@ export class ListProductComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
-
+  // tao doi tuong img chua path forder acess
 }

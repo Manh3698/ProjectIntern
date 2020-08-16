@@ -35,6 +35,7 @@ export class RegisterComponent implements OnInit {
         alert("Đăng ký thành công");
       },
       error => {
+        console.log(error)
         this.errorMessage = error.error.message;
         this.isSignUpFailed = true;
       }
