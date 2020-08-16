@@ -5,68 +5,12 @@
                 <div class="col-sm-12 col-md-8 col-lg-7 left">
                     <h2 class="head-text">Khám phá danh mục</h2>
                     <div class="cate-box">
-                        <ul>
+                        <ul *ngFor = "let name of typeProduct ; let i = index">
                             <li class="cate-home-page">
-                                <a routerLink="/list-product" title="Xe cộ">
-                                    <img src="./assets/img/category/logo-xeco.png" alt="Xe cộ" title="Xe cộ">
-                                    <span>Xe cộ</span> </a>
+                                <a routerLink="/list-product" title="{{images[i].url}}">
+                                    <img src="{{images[i].url}}" alt="{{images[i].url}}" title="{{images[i].name}}">
+                                    <span>{{name.groupName}}</span> </a>
                             </li>
-                            <!-- <li class="cate-home-page">
-                                <a routerLink="/list-product" title="Bất động sản - Mua bán">
-                                    <img src="./assets/img/category/logo-bds.png" alt="Bất động sản - Mua bán"
-                                        title="Bất động sản - Mua bán">
-                                    <span>Bất động sản - Mua bán</span> </a>
-                            </li>
-                            <li class="cate-home-page">
-                                <a routerLink="/list-product" title="Bất động sản - Thuê">
-                                    <img src="./assets/img/category/logo-bdsthue.jpg" alt="Bất động sản - Thuê"
-                                        title="Bất động sản - Thuê">
-                                    <h1>Bất động sản - Thuê</h1>
-                                </a>
-                            </li>
-                            <li class="cate-home-page">
-                                <a routerLink="/list-product" title="Đồ điện tử">
-                                    <img src="./assets/img/category/logo-dodientu.png" alt="Đồ điện tử"
-                                        title="Đồ điện tử">
-                                    <span>Đồ điện tử</span> </a>
-                            </li>
-                            <li class="cate-home-page">
-                                <a routerLink="/list-product" title="Thời trang, Đồ dùng cá nhân">
-                                    <img src="./assets/img/category/logo-thoitrang-dodungcanhan.png"
-                                        alt="Thời trang, Đồ dùng cá nhân" title="Thời trang, Đồ dùng cá nhân">
-                                    <span>Thời trang, Đồ dùng cá nhân</span> </a>
-                            </li>
-                            <li class="cate-home-page">
-                                <a routerLink="/list-product" title="Nội ngoại thất, Đồ gia dụng">
-                                    <img src="./assets/img/category/logo-noithat.png"
-                                        alt="Nội ngoại thất, Đồ gia dụng" title="Nội ngoại thất, Đồ gia dụng">
-                                    <span>Nội ngoại thất, Đồ gia dụng</span> </a>
-                            </li>
-                            <li class="cate-home-page">
-                                <a routerLink="/list-product" title="Giải trí, Thể thao, Sở thích">
-                                    <img src="./assets/img/category/logo-giaitrithethaodulich.png"
-                                        alt="Giải trí, Thể thao, Sở thích" title="Giải trí, Thể thao, Sở thích">
-                                    <span>Giải trí, Thể thao, Sở thích</span> </a>
-                            </li>
-                            <li class="cate-home-page">
-                                <a routerLink="/list-product" title="Đồ dùng văn phòng, công nông nghiệp">
-                                    <img src="./assets/img/category/logo-dodungvanphong.png"
-                                        alt="Đồ dùng văn phòng, công nông nghiệp"
-                                        title="Đồ dùng văn phòng, công nông nghiệp">
-                                    <span>Đồ dùng văn phòng, công nông nghiệp</span> </a>
-                            </li>
-                            <li class="cate-home-page">
-                                <a routerLink="/list-product" title="Việc làm, Dịch vụ">
-                                    <img src="./assets/img/category/logo-dichvu-vieclam.png" alt="Việc làm, Dịch vụ"
-                                        title="Việc làm, Dịch vụ">
-                                    <span>Việc làm, Dịch vụ</span> </a>
-                            </li>
-                            <li class="cate-home-page">
-                                <a routerLink="/list-product" title="Sản phẩm khác">
-                                    <img src="./assets/img/category/logo-danhmuckhac.png" alt="Sản phẩm khác"
-                                        title="Sản phẩm khác">
-                                    <span>Sản phẩm khác</span> </a>
-                            </li> -->
                         </ul>
                         <div class="clearfix"></div>
                     </div>

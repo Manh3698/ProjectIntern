@@ -6,9 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+   }
 
-  public gettypeProduct(){
-    return this.http.get('http://localhost:9000/api/group-product');
-  }
+   public getTypeProduct(){
+     return this.httpClient.get('http://localhost:9000/api/group-product');
+   }
 }
