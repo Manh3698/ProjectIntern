@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../_services/auth.service';
 
@@ -15,13 +15,17 @@ export class RegisterComponent implements OnInit {
     email : new FormControl(''),
     phone : new FormControl(''),
     username : new FormControl(''),
-    password : new FormControl('')
+    password : new FormControl(''),
+    roleEntities: new FormControl([{
+      "roleId" : "3",
+      "roleName" : "ROLE_USER"
+    }])
   });
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
 
-  constructor(private authService: AuthService, private router : Router) { }
+  constructor(private authService: AuthService, private router : Router,private fb: FormBuilder) { }
 
   ngOnInit(): void {
   };
@@ -29,6 +33,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(){
     this.authService.register(this.registerForm.value).subscribe(
       res => {
+        console.log(this.registerForm.value)
         console.log(res);
         this.isSuccessful = true;
         this.isSignUpFailed = false;

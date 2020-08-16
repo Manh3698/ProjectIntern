@@ -24,9 +24,7 @@ export class HeaderComponent implements OnInit {
        
       const token = this.tokenStorageService.getToken();
       let decoded = jwt_decode(token);
-      console.log(decoded);
       this.username = decoded['sub'];
-      console.log(this.username);
     }
   };
   logout() {
