@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 declare var $:any; 
 
 @Component({
@@ -8,9 +9,16 @@ declare var $:any;
 })
 export class ChangepassComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private route : ActivatedRoute) { }
+  model: any = {};
+  acountId ;
   ngOnInit(): void {
+
+    // this.model.token = this.route.snapshot.queryParamMap.get('token');
+    this.acountId = this.route.snapshot.queryParamMap.get('acount_id');
+
+    console.log("" +this.acountId);
+
     $(document).ready(function(){
       function isCompare(pass, passconf) {
         var pass_val = pass.val();

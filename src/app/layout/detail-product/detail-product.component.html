@@ -7,16 +7,14 @@
                         <a href="https://chomienphi.net/">ChoMienPhi.net </a>
                         <a href="https://chomienphi.net/mua/ho-chi-minh/all.htm"> <i
                                 class="fa fa-angle-double-right"></i>
-                            Hồ Chí
-                            Minh</a> <a href="https://chomienphi.net/mua/quan-go-vap/all.htm"> <i
-                                class="fa fa-angle-double-right"></i> Quận Gò Vấp</a> <a href="mua/all/xe-co.htm">
-                            <i class="fa fa-angle-double-right"></i> Xe cộ</a> <a href="mua/all/o-to.htm"><i
-                                class="fa fa-angle-double-right"></i> Ô tô</a> <i
-                            class="fa fa-angle-double-right"></i> Gia
-                        đình cần
-                        bán xe Bmw 320i, sản xuất 2011 </div>
+                                {{product.province}}
+                        </a> 
+                            <a href="https://chomienphi.net/mua/quan-go-vap/all.htm"> <i
+                                class="fa fa-angle-double-right"></i> {{product.district}}</a> <a href="mua/all/xe-co.htm">
+                            <i class="fa fa-angle-double-right"></i> {{product.typeProductDTO.groupProductDTO.groupName}}</a> <a href="mua/all/o-to.htm"><i
+                                class="fa fa-angle-double-right"></i> {{product.typeProductDTO.typeName}}</a> </div>
 
-                    <h1 class="head-text">Gia đình cần bán xe Bmw 320i, sản xuất 2011</h1>
+                    <h1 class="head-text">{{product.title}}</h1>
                     <div class="article-img">
                         <div class="similar-product">
                             <div id="owl-similar-post" class="owl-carousel owl-theme">
@@ -40,7 +38,7 @@
                         <div class="clear"></div>
                         <div class="overlay"></div>
                         <div class="price-block">
-                            <span class="price text-left pull-left">Giá: 396,000,000 đ</span>
+                            <span class="price text-left pull-left">Giá: {{product.price}}</span>
                             <span class="price-content text-right pull-right">Tin cá nhân , đăng 2 ngày trước</span>
                         </div>
                     </div>
@@ -48,11 +46,12 @@
                         <span>Tin được duyệt bởi ChoMienPhi.net</span>
                     </div>
                     <div class="desc-content">
-                        Loại: <b>Ô tô, Cần bán</b> <br>
-                        Địa chỉ: <b>hcm</b><br>
-                        Khu vực: <strong>Hồ Chí Minh</strong>, quận: <strong>Quận Gò Vấp</strong><br><br>
-                        <pre class="content_format_pre">Gia đình cần bán xe Bmw 320i, sản xuất 2011, số tự động, màu vàng chanh thể thao. Xe gia đình sử dụng còn mới ken xà ben. Odo 56.000km, nội thất mới tinh trang bị đầy đủ đồ chơi, máy móc nguyên zin đi cực bóc và tiết kiệm nhiên liệu, gầm máy sạch sẽ,.v..v... xe bao không một lỗi lầm, đến nhà xem xe là thích ngay. Kẹt tiền bán 396 triệu.
-Liên hệ: 0933334545 - 0937373368 gặp Út Tèo.</pre>
+                        Loại: <b>{{product.typeProductDTO.typeName}}</b> <br>
+                        Địa chỉ: <b> {{product.province}}</b><br>
+                        Khu vực: <strong>{{product.province}}</strong><br><br>
+                        <pre class="content_format_pre">{{product.description}}
+Liên hệ: {{product.accountDTO.phone}}</pre>
+
                     </div>
                     <div class="sharing">
                         <h2>Chia sẻ tin này</h2>
@@ -112,13 +111,13 @@ Liên hệ: 0933334545 - 0937373368 gặp Út Tèo.</pre>
                             <div class="clear"></div>
                         </div>
                         <div class="details text-center">
-                            <h2>Liên hệ <a>Minh</a></h2>
+                            <h2>Liên hệ <a>{{product.accountDTO.lastName}}</a></h2>
                             <span class="btnphone contact phone" id="showphone" data-phone="0901986161"
                                 data-id="#366852">
-                                <span class="numberphone"><i class="fa fa-mobile"></i>
+                                <span class="numberphone">
                                     <a class="showPhone aphone">Bấm để hiện số</a>
                                     <a class="callPhone aphone" style="display:none"
-                                        href="tel:0901986161">0901986161</a>
+                                        href="tel:0901986161">{{product.accountDTO.phone}}</a>
                                 </span>
                             </span>
                         </div>
