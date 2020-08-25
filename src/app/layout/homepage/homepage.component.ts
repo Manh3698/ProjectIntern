@@ -18,7 +18,7 @@ export class HomepageComponent implements OnInit {
     this.homepageService.getGroupProduct().subscribe((data:any)=>{
       this.typeProduct = data;
       console.log(this.typeProduct);
-    });
+    }, error => {console.log(error)});
 
   
   }

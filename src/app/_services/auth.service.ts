@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { FormControl } from '@angular/forms';
 
 const AUTH_API = 'http://localhost:9000/api/auth/';
 
@@ -28,7 +29,8 @@ export class AuthService {
       password: user.password,
       firstName: user.firstName,
       lastName: user.lastName,
-      phone: user.phone
+      phone: user.phone,
+      roleEntities: user.roleEntities
     }, httpOptions);
   }
 }
