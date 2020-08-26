@@ -5,42 +5,42 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label>Tài khoản</label>
-                        <input type="text"  class="form-control" readonly="readonly">
+                        <label>UserName</label>
+                        <input type="text"  class="form-control" readonly="readonly" value="{{profile.username}}">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label>Địa chỉ email <span class="text-danger">(*)</span></label>
+                        <label>Email <span class="text-danger">(*)</span></label>
 
                         <input type="text" name="user_email"  class="form-control"
-                            readonly="readonly">
+                            readonly="readonly" value="{{profile.email}}">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label>Họ tên <span class="text-danger">(*)</span></label>
+                        <label>First Name <span class="text-danger">(*)</span></label>
                         <input type="text" name="user_fullname" class="form-control"
-                            id="user_fullname" placeholder="Enter text">
+                            id="user_fullname" placeholder="Enter text" value="{{profile.firstName}}">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label>Ngày sinh</label>
+                        <label>Last Name</label>
                         <input type="text" name="user_birthday" value="" class="form-control" id="user_birthday"
-                            placeholder="Enter text">
+                            placeholder="Enter text" value="{{profile.lastName}}">
                     </div>
                 </div>
 
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label>Số điện thoại <span class="text-danger">(*)</span></label>
+                        <label>Phone <span class="text-danger">(*)</span></label>
                         <input type="text" name="user_phone" value="" class="form-control" id="user_phone"
-                            placeholder="Enter text">
+                            placeholder="Enter text" value="{{profile.phone}}">
                     </div>
                 </div>
 
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <div class="form-group">
                         <label>Giới tính</label>
                         <select class="form-control" id="user_gender" name="user_gender">
@@ -49,9 +49,9 @@
                             <option selected="selected" value="0">Khác</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Hình ảnh</label>
                 <input type="file" name="user_picture" value="" class="form-control" id="user_picture">
                 <br>
@@ -62,7 +62,7 @@
                 <label>Chi tiết</label>
                 <textarea name="user_note" cols="40" rows="10" class="form-control" id="user_note"
                     placeholder="Enter text" value=""></textarea>
-            </div>
+            </div> -->
 
             <hr>
             <div class="form-group">

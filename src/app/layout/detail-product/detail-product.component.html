@@ -5,34 +5,44 @@
                 <div class="col-sm-12 col-md-8 left">
                     <div class="breadcrumb">
                         <a href="https://chomienphi.net/">ChoMienPhi.net </a>
-                        <a href="https://chomienphi.net/mua/ho-chi-minh/all.htm"> <i
-                                class="fa fa-angle-double-right"></i>
-                                {{product.province}}
+                        <a href="https://chomienphi.net/mua/ho-chi-minh/all.htm"> 
+                            <i class="fa fa-angle-double-right"></i>
+                            {{product.province}}
+                        </a>
+                        <a href="https://chomienphi.net/mua/quan-go-vap/all.htm"> 
+                            <i class="fa fa-angle-double-right"></i> 
+                            {{product.district}}
                         </a> 
-                            <a href="https://chomienphi.net/mua/quan-go-vap/all.htm"> <i
-                                class="fa fa-angle-double-right"></i> {{product.district}}</a> <a href="mua/all/xe-co.htm">
-                            <i class="fa fa-angle-double-right"></i> {{product.typeProductDTO.groupProductDTO.groupName}}</a> <a href="mua/all/o-to.htm"><i
-                                class="fa fa-angle-double-right"></i> {{product.typeProductDTO.typeName}}</a> </div>
+                        <a href="mua/all/xe-co.htm">
+                            <i class="fa fa-angle-double-right"></i>
+                            {{product.typeProductDTO.groupProductDTO.groupName}}</a>
+                        <a href="mua/all/o-to.htm">
+                            <i class="fa fa-angle-double-right"></i>
+                             {{product.typeProductDTO.typeName}}
+                        </a> 
+                    </div>
 
                     <h1 class="head-text">{{product.title}}</h1>
                     <div class="article-img">
                         <div class="similar-product">
-                            <div id="owl-similar-post" class="owl-carousel owl-theme" >
-                                <div class="item-product" >
-                                    <img id="img_01" src="http://localhost:9000/api/files/{{product.imageDTOs[0].imageName}}"
+                            <div id="owl-similar-post" class="owl-carousel owl-theme">
+                                <div class="item-product">
+                                    <img id="img_01"
+                                        src="http://localhost:9000/api/files/{{product.imageDTOs[0].imageName}}"
                                         alt="{{product.imageDTOs[0].imageName}}"
                                         title="{{product.imageDTOs[0].imageName}}">
                                 </div>
-                                <div class="item-product" >
-                                    <img id="img_01" src="http://localhost:9000/api/files/{{product.imageDTOs[1].imageName}}"
+                                <div class="item-product">
+                                    <img id="img_01"
+                                        src="http://localhost:9000/api/files/{{product.imageDTOs[1].imageName}}"
                                         alt="{{product.imageDTOs[1].imageName}}"
                                         title="{{product.imageDTOs[1].imageName}}">
                                 </div>
-                                <div class="item-product" >
+                                <!-- <div class="item-product" >
                                     <img id="img_01" src="http://localhost:9000/api/files/{{product.imageDTOs[2].imageName}}"
                                         alt="{{product.imageDTOs[2].imageName}}"
                                         title="{{product.imageDTOs[2].imageName}}">
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -59,8 +69,7 @@ Liên hệ: {{product.accountDTO.phone}}</pre>
                             <ul class="box-face">
                                 <li>
                                     <a href="">
-                                        <img src="./assets/img/icon-social/icon-facebook.png" width="30"
-                                            height="30">
+                                        <img src="./assets/img/icon-social/icon-facebook.png" width="30" height="30">
                                     </a>
                                 </li>
 

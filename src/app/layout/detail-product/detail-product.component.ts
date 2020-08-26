@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DetailProductService } from './detail-product.service';
 import { ConstantPool } from '@angular/compiler';
+import { TransfereService } from 'src/app/_services/transfere.service';
 declare var jquery:any;
 declare var $ :any;
 
@@ -11,13 +12,44 @@ declare var $ :any;
 })
 export class DetailProductComponent implements OnInit {
 
-  constructor(private detailPriductService : DetailProductService) { }
+  constructor(private detailPriductService : DetailProductService, private transfereService : TransfereService) { }
   
-  product : any;
+  product = {
+    title : "",
+    district: "",
+    province :"", 
+    price : "", 
+    typeName : "", 
+    accountDTO:({
+      phone : "",
+      lastName : "",
+      firstName : "",
+    }),
+    description : "",
+    typeProductDTO :({
+      groupProductDTO :({
+        groupName : ""
+      }),
+      typeName : ""
+    }),
+    
+    imageDTOs:([
+      {
+        imageName : ""
+      },
+      {
+        imageName : ""
+      }
+    ])
+
+  };
+  id = this.transfereService.getData();
+  
 
   ngOnInit(): void {
 
-    this.detailPriductService.getProductById(5).subscribe((data:any)=>{
+    this.detailPriductService.getProductById(this.id).subscribe((data:any)=>{
+      console.log(this.id);
       this.product = data ;
       console.log(this.product);
     });

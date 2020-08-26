@@ -84,7 +84,7 @@
                                                 </a>
                                             </div>
                                             <div class="article-desc col-xs-9">
-                                                <a class="title" routerLink="/detail-product">{{sale.title}}</a>
+                                                <a class="title" (click)="getDetail(sale.salePostId)">{{sale.title}}</a>
                                                 <p class="price">{{sale.price}}</p>
                                                 <p class="desc-time">
                                                     <i class="fa fa-map-marker" aria-hidden="true">
