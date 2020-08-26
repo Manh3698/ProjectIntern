@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DetailProductService } from './detail-product.service';
+import { ConstantPool } from '@angular/compiler';
 declare var jquery:any;
 declare var $ :any;
 
@@ -9,10 +11,17 @@ declare var $ :any;
 })
 export class DetailProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private detailPriductService : DetailProductService) { }
   
+  product;
 
   ngOnInit(): void {
+
+    this.detailPriductService.getProductById(5).subscribe((data:any)=>{
+      this.product = data ;
+      console.log("data : " + this.product);
+    });
+
     $(document).ready(function () {
       $("#owl-similar-post").owlCarousel({
           loop: true,
@@ -24,7 +33,17 @@ export class DetailProductComponent implements OnInit {
           nav: true,
           navText: ["<i class='fa fa-angle-left fa-3x'></i>", "<i class='fa fa-angle-right fa-3x'></i>"],
       });
+
+      $("#showPhone").click(function(){
+        $(this).css("display:none")
+      })
+      
   });
+
+  
+
   }
+
+
 
 }

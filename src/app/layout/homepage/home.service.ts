@@ -9,7 +9,11 @@ export class HomeService {
   constructor(private httpClient: HttpClient) {
    }
 
-   public getTypeProduct(){
+   public getGroupProduct(){
      return this.httpClient.get('http://localhost:9000/api/group-product');
+   }
+
+   public getTypeProduct(id){
+    return this.httpClient.get(`http://localhost:9000/api/type-product?groupProductId=${id}`);
    }
 }

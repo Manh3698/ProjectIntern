@@ -15,11 +15,12 @@ export class HomepageComponent implements OnInit {
   constructor(private homepageService : HomeService , private router : Router ) { }
 
   ngOnInit(): void {
-    this.homepageService.getTypeProduct().subscribe((data:any)=>{
+    this.homepageService.getGroupProduct().subscribe((data:any)=>{
       this.typeProduct = data;
       console.log(this.typeProduct);
     }, error => {console.log(error)});
 
+  
   }
 
   images = [
