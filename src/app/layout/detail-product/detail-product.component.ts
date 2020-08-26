@@ -47,7 +47,10 @@ export class DetailProductComponent implements OnInit {
   
 
   ngOnInit(): void {
-
+    $('.showPhone').on('click', function () {
+      $(this).hide(1);
+      $('.callPhone').show(1);
+    });
     this.detailPriductService.getProductById(this.id).subscribe((data:any)=>{
       console.log(this.id);
       this.product = data ;
