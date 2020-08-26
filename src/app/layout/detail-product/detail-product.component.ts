@@ -13,13 +13,13 @@ export class DetailProductComponent implements OnInit {
 
   constructor(private detailPriductService : DetailProductService) { }
   
-  product;
+  product : any;
 
   ngOnInit(): void {
 
     this.detailPriductService.getProductById(5).subscribe((data:any)=>{
       this.product = data ;
-      console.log("data : " + this.product);
+      console.log(this.product);
     });
 
     $(document).ready(function () {
