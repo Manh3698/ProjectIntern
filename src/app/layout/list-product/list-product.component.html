@@ -14,11 +14,11 @@
                                     <div class="panel panel-default"  *ngFor = "let product of GroupProduct">
                                         <div class="panel-heading">
                                             <a class="fa fa-arrow-circle-right " data-toggle="collapse" href="#{{product.groupProductId}}"
-                                                data-parent="#accordion" (click)="getTypeProduct(product.groupProductId)">
+                                                data-parent="#accordion" aria-expanded="false" (click)="getTypeProduct(product.groupProductId)">
                                                 <h4 class="panel-title">{{product.groupName}}</h4>
                                             </a>
                                         </div>
-                                        <div id="{{product.groupProductId}}" class="panel-collapse collapse in">
+                                        <div id="{{product.groupProductId}}" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 <ul >
                                                     <li class="active" *ngFor = "let type of TypeProduct"> 
