@@ -9,44 +9,25 @@
                             <li><a data-toggle="tab" href="#sell">Bán</a></li>
                         </ul>
                         <div class="tab-content" id="main-tab">
-                            <div id="buy" class="tab-pane fade in active">
-                                <div class="panel-group" id="accordion">
-                                    <div class="panel panel-default">
+                            <div id="buy" class="tab-pane fade in active" >
+                                <div class="panel-group" id="accordion" >
+                                    <div class="panel panel-default"  *ngFor = "let product of GroupProduct">
                                         <div class="panel-heading">
-                                            <a class="fa fa-arrow-circle-right " data-toggle="collapse"
-                                                data-parent="#accordion" href="https://chomienphi.net/#bid-1">
-                                                <h4 class="panel-title">Xe cộ</h4>
+                                            <a class="fa fa-arrow-circle-right " data-toggle="collapse" href="#{{product.groupProductId}}"
+                                                data-parent="#accordion" (click)="getTypeProduct(product.groupProductId)">
+                                                <h4 class="panel-title">{{product.groupName}}</h4>
                                             </a>
                                         </div>
-                                        <div id="bid-1" class="panel-collapse collapse in">
+                                        <div id="{{product.groupProductId}}" class="panel-collapse collapse in">
                                             <div class="panel-body">
-                                                <ul>
-                                                    <li class="active">
-                                                        <a href="https://chomienphi.net/mua/xe-may.htm">
-                                                            Xe máy </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a href="https://chomienphi.net/mua/o-to.htm">
-                                                            Ô tô </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a href="https://chomienphi.net/mua/xe-dap.htm">
-                                                            Xe đạp </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a href="https://chomienphi.net/mua/xe-tai-xe-khac.htm">
-                                                            Xe tải, Xe khác </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="https://chomienphi.net/mua/phu-tung-phu-kien-xe.htm">
-                                                            Phụ tùng, Phụ kiện xe </a>
+                                                <ul >
+                                                    <li class="active" *ngFor = "let type of TypeProduct"> 
+                                                        <a  (click)="getSalePost(type.typeProductId)">{{type.typeName}}</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                             <div id="sell" class="tab-pane fade" style="height: 200px;">
@@ -66,11 +47,11 @@
                         <div class="tab-wrapper">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a href="?t=all&amp;v=list">Tất
-                                        cả 6,919</a></li>
-                                <li class=""><a href="?t=f&amp;v=list">Cá
+                                        cả </a></li>
+                                <!-- <li class=""><a href="?t=f&amp;v=list">Cá
                                         nhân 6,909</a></li>
                                 <li class=""><a href="?t=c&amp;v=list">Công
-                                        ty 10</a></li>
+                                        ty 10</a></li> -->
                                 <!-- FiLTER -->
                                 <li class="filter pull-right hidden-xs ">
                                     <ul class="type-filter">
@@ -93,26 +74,25 @@
                             </ul>
                             <div class="tab-content">
                                 <div id="all-articles" class="tab-pane fade in active">
-                                    <ul class="list_type_box">
-                                        <li class="row">
+                                    <ul class="list_type_box" >
+                                        <li class="row" *ngFor = "let sale of SalePost">
                                             <div class="article-img col-xs-2">
-                                                <a routerLink="/detail-product">
-                                                    <img src="https://chomienphi.net/public/fe/images/no_image.png"
-                                                        alt="Bán xe Honda PCX 150 đời 2018, mới 95% ngay chủ"
-                                                        title="Bán xe Honda PCX 150 đời 2018, mới 95% ngay chủ">
+                                                <a (click)="getDetail(sale.salePostId)">
+                                                    <img src="http://localhost:9000/api/files/{{sale.imageDTOs[0].imageName}}"
+                                                        alt="{{sale.imageDTOs[0].imageName}}"
+                                                        title="{{sale.imageDTOs[0].imageName}}">
                                                 </a>
                                             </div>
                                             <div class="article-desc col-xs-9">
-                                                <a class="title" routerLink="/detail-product">Bán xe Honda PCX 150 đời 2018, mới 95% ngay
-                                                    chủ</a>
-                                                <p class="price">58,800,000 VNĐ</p>
+                                                <a class="title" routerLink="/detail-product">{{sale.title}}</a>
+                                                <p class="price">{{sale.price}}</p>
                                                 <p class="desc-time">
                                                     <i class="fa fa-map-marker" aria-hidden="true">
-                                                        &nbsp;Hồ Chí Minh
+                                                        &nbsp;{{sale.province}}
                                                     </i>
                                                     <span>|</span>
                                                     <i class="fa fa-clock-o" aria-hidden="true">
-                                                        &nbsp;17 tiếng trước
+                                                        &nbsp;{{sale.startTime}}
                                                     </i>
                                                 </p>
                                             </div>
@@ -122,35 +102,7 @@
                                                 </a>
                                             </div>
                                         </li>
-                                        <li class="row">
-                                            <div class="article-img col-xs-2">
-                                                <a href="">
-                                                    <img src="https://chomienphi.net/public/fe/images/no_image.png"
-                                                        alt="Bán xe Honda PCX 150 đời 2018, mới 95% ngay chủ"
-                                                        title="Bán xe Honda PCX 150 đời 2018, mới 95% ngay chủ">
-                                                </a>
-                                            </div>
-                                            <div class="article-desc col-xs-9">
-                                                <a class="title" href="">Bán xe Honda PCX 150 đời 2018, mới 95% ngay
-                                                    chủ</a>
-                                                <p class="price">58,800,000 VNĐ</p>
-                                                <p class="desc-time">
-                                                    <i class="fa fa-map-marker" aria-hidden="true">
-                                                        &nbsp;Hồ Chí Minh
-                                                    </i>
-                                                    <span>|</span>
-                                                    <i class="fa fa-clock-o" aria-hidden="true">
-                                                        &nbsp;17 tiếng trước
-                                                    </i>
-                                                </p>
-                                            </div>
-                                            <div class="article-bookmark text-right col-xs-1">
-                                                <a class="title" href="">
-                                                    <i class="fa fa-bookmark-o fa-2x" aria-hidden="true"></i>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="row">
+                                        <!-- <li class="row">
                                             <div class="article-img col-xs-2">
                                                 <a href="">
                                                     <img src="https://chomienphi.net/public/fe/images/no_image.png"
@@ -206,6 +158,34 @@
                                                 </a>
                                             </div>
                                         </li>
+                                        <li class="row">
+                                            <div class="article-img col-xs-2">
+                                                <a href="">
+                                                    <img src="https://chomienphi.net/public/fe/images/no_image.png"
+                                                        alt="Bán xe Honda PCX 150 đời 2018, mới 95% ngay chủ"
+                                                        title="Bán xe Honda PCX 150 đời 2018, mới 95% ngay chủ">
+                                                </a>
+                                            </div>
+                                            <div class="article-desc col-xs-9">
+                                                <a class="title" href="">Bán xe Honda PCX 150 đời 2018, mới 95% ngay
+                                                    chủ</a>
+                                                <p class="price">58,800,000 VNĐ</p>
+                                                <p class="desc-time">
+                                                    <i class="fa fa-map-marker" aria-hidden="true">
+                                                        &nbsp;Hồ Chí Minh
+                                                    </i>
+                                                    <span>|</span>
+                                                    <i class="fa fa-clock-o" aria-hidden="true">
+                                                        &nbsp;17 tiếng trước
+                                                    </i>
+                                                </p>
+                                            </div>
+                                            <div class="article-bookmark text-right col-xs-1">
+                                                <a class="title" href="">
+                                                    <i class="fa fa-bookmark-o fa-2x" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        </li> -->
                                     </ul>
                                     <div class="text-center mb15">
                                         <ul class="pagination pagination-sm pull-right m0">

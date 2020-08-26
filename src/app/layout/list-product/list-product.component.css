@@ -6,3 +6,15 @@
     margin-right: 0 !important;
     
 }
+.active a{
+    color : #666;
+    cursor: pointer;
+    padding-left: 5px;
+}
+.active a :active{
+    color : orange;
+}
+.panel-default .panel-body>ul li.active a,
+ .panel-default .panel-body>ul li.active {
+    color: orange;
+}
